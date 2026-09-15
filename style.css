@@ -1,0 +1,296 @@
+/* ===== ОБЩИЕ НАСТРОЙКИ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0f1720;
+    color: #e8eef5;
+    line-height: 1.6;
+}
+
+a {
+    color: #4fc3f7;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #81d4fa;
+}
+
+/* ===== ШАПКА ===== */
+header {
+    background: #16222e;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #1e90ff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4fc3f7;
+}
+
+nav a {
+    margin-left: 20px;
+    font-size: 16px;
+    color: #b0c4d8;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background: #1e90ff;
+    color: #fff;
+}
+
+nav a.active {
+    background: #1e90ff;
+    color: #fff;
+}
+
+/* ===== ГЛАВНЫЙ БЛОК ===== */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #0f2027, #1e3c5a, #0f2027);
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #4fc3f7;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #b0c4d8;
+}
+
+.btn {
+    display: inline-block;
+    background: #1e90ff;
+    color: #fff;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #4fc3f7;
+    color: #0f1720;
+}
+
+/* ===== СЕКЦИИ ===== */
+section {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #4fc3f7;
+}
+
+/* ===== КАРТОЧКИ ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #16222e;
+    padding: 30px 25px;
+    border-radius: 12px;
+    border: 1px solid #22303f;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #1e90ff;
+    box-shadow: 0 10px 25px rgba(30, 144, 255, 0.2);
+}
+
+.card-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #e8eef5;
+}
+
+.card p {
+    color: #8fa5b8;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+/* ===== О САЙТЕ ===== */
+.about {
+    background: #16222e;
+    border-radius: 12px;
+    padding: 40px;
+    border: 1px solid #22303f;
+}
+
+.about p {
+    margin-bottom: 15px;
+    color: #b0c4d8;
+}
+
+/* ===== ПОДВАЛ ===== */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #16222e;
+    border-top: 2px solid #1e90ff;
+    color: #8fa5b8;
+    margin-top: 40px;
+}
+
+/* ===== АДАПТИВ ПОД ТЕЛЕФОН ===== */
+max-width: 700px {
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+    }
+    nav a {
+        margin: 4px;
+        font-size: 14px;
+        display: inline-block;
+    }
+    .hero h1 {
+        font-size: 28px;
+    }
+    section {
+        padding: 40px 20px;
+    }
+}/* ===== ЗАГОЛОВОК СТРАНИЦЫ ===== */
+.page-title {
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.page-title h1 {
+    font-size: 36px;
+    color: #4fc3f7;
+    margin-bottom: 12px;
+}
+
+.page-title p {
+    color: #8fa5b8;
+    font-size: 17px;
+}
+
+/* ===== ПОИСК ===== */
+.search-block {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+}
+
+#searchPoints {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #22303f;
+    background: #16222e;
+    color: #e8eef5;
+    outline: none;
+    transition: 0.3s;
+}
+
+#searchPoints:focus {
+    border-color: #1e90ff;
+}
+
+/* ===== СПИСКИ (ВОДОЁМЫ / СБОРКИ) ===== */
+.points-list,
+.builds-list {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+.water-item,
+.build-item {
+    background: #16222e;
+    border: 1px solid #22303f;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.water-item:hover,
+.build-item:hover {
+    border-color: #1e90ff;
+}
+
+.water-header,
+.build-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.water-header h2,
+.build-header h2 {
+    font-size: 20px;
+    color: #e8eef5;
+    font-weight: 600;
+}
+
+.toggle {
+    color: #4fc3f7;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.water-content,
+.build-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 25px;
+}
+
+.water-item.open .water-content,
+.build-item.open .build-content {
+    max-height: 2000px;
+    padding: 0 25px 25px;
+}
+
+.empty {
+    color: #6b7f92;
+    font-style: italic;
+    font-size: 15px;
+}
